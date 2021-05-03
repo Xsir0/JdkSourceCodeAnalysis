@@ -723,6 +723,8 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
         try {
             for (; r < size; r++)
                 // 将需要操作的元素集中到 数组的头部；
+                // false : 将不包含的元素前移
+                // true ： 将包含的元素前移
                 if (c.contains(elementData[r]) == complement)
                     elementData[w++] = elementData[r];
         } finally {
